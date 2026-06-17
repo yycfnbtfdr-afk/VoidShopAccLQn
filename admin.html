@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin VoidShopAccLQ</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+padding:20px;
+}
+
+.box{
+max-width:500px;
+margin:auto;
+background:#1f2937;
+padding:20px;
+border-radius:12px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+#panel{
+display:none;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Đăng nhập Admin</h2>
+
+<input type="text" id="user" placeholder="Tên đăng nhập">
+<input type="password" id="pass" placeholder="Mật khẩu">
+
+<button onclick="login()">Đăng nhập</button>
+
+<div id="panel">
+
+<h2>Thêm Acc</h2>
+
+<input type="text" id="maacc" placeholder="Mã ACC">
+<input type="text" id="rank" placeholder="Rank">
+<input type="text" id="skin" placeholder="Số Skin">
+<input type="text" id="gia" placeholder="Giá">
+
+<button onclick="themAcc()">Lưu Acc</button>
+
+</div>
+
+</div>
+
+<script>
+
+const TK="admin";
+const MK="VoidShop2026";
+
+function login(){
+
+let u=document.getElementById("user").value;
+let p=document.getElementById("pass").value;
+
+if(u===TK && p===MK){
+
+alert("Đăng nhập thành công");
+
+document.getElementById("panel").style.display="block";
+
+}else{
+
+alert("Sai tài khoản hoặc mật khẩu");
+
+}
+
+}
+
+function themAcc(){
+
+alert("Đã lưu acc (bản thử nghiệm)");
+
+}
+
+</script>
+
+</body>
+</html>
